@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Letter from './letter';
 
 
-class Letter extends Component {
+class Letters extends Component {
     render() {
-        let letters=['a','b','c','d','e','f']
+        let letters=this.props.letterStatus
         return (<div>
            <div>Avilable letters</div>
-           {letters.map(l=><span>{l}</span>)}
+           {Object.keys(letters).map(l=>letters[l]?<Letter letter={l} className='clicked'/>:<Letter letter={l} className='notclicked'/>)}
         </div>)
     }
 }
-export default Letter
+export default Letters
