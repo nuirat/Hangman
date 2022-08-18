@@ -12,8 +12,21 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+button{
+  margin: 5px;
+  border-radius: 10px;
+}
 span{
   margin: 5px;
+}
+.high-score{
+  color: green;
+}
+.medium-score{
+  color: yellow;
+}
+.low-score{
+  color: red;
 }
 .clicked{
   text-decoration: line-through

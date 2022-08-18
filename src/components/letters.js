@@ -7,7 +7,7 @@ class Letters extends Component {
         let letters=this.props.letterStatus
         return (<div>
            <div>Avilable letters</div>
-           {Object.keys(letters).map(l=>letters[l]?<Letter letter={l} className='clicked'/>:<Letter letter={l} className='notclicked'/>)}
+           {Object.keys(letters).map(l=>letters[l]?<Letter letter={l} className='clicked' selectLetter={this.props.selectLetter}/>:<Letter letter={l} className='notclicked' selectLetter={this.props.selectLetter}/>)}
         </div>)
     }
 }
